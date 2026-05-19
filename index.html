@@ -275,12 +275,12 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 .hero::after {
   content: "";
   position: absolute;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 56px;
   background: var(--paper);
-  clip-path: ellipse(55% 100% at 50% 100%);
+  clip-path: polygon(0 100%, 100% 100%, 100% 30%, 0 100%);
 }
 .hero-inner {
   position: relative;
@@ -317,21 +317,24 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
   margin-bottom: 32px;
   line-height: 1.6;
 }
-.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 44px; }
+.cta-row { display: flex; flex-wrap: nowrap; gap: 10px; margin-bottom: 44px; }
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 15px 24px;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 18px;
   border-radius: 13px;
   font-weight: 700;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: .92rem;
+  white-space: nowrap;
   cursor: pointer;
   border: 0;
   min-height: 52px;
   transition: transform .15s, box-shadow .15s, background .2s;
 }
+@media (min-width: 480px) { .btn { padding: 15px 24px; font-size: 1rem; gap: 10px; } }
 .btn-primary {
   background: linear-gradient(135deg, var(--accent) 0%, #b8441a 100%);
   color: #fff;
@@ -1202,11 +1205,11 @@ footer a:hover { color: #fff; }
       <div>
         <h4>Area pages</h4>
         <ul>
-          <li><a href="/cwmbran">Cwmbran</a></li>
-          <li><a href="/caerphilly">Caerphilly</a></li>
-          <li><a href="/pontypool">Pontypool</a></li>
-          <li><a href="/chepstow">Chepstow</a></li>
-          <li><a href="/risca">Risca</a></li>
+          <li><a href="cwmbran.html">Cwmbran</a></li>
+          <li><a href="caerphilly.html">Caerphilly</a></li>
+          <li><a href="pontypool.html">Pontypool</a></li>
+          <li><a href="chepstow.html">Chepstow</a></li>
+          <li><a href="risca.html">Risca</a></li>
         </ul>
       </div>
       <div>
